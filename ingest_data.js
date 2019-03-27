@@ -12,8 +12,10 @@ async function getData() {
     return data;
 }
 
-let bigData = [];
-
 getData()
-    .then(response => console.log(response));
+    .then(response => {
+        response.forEach(data => {
+            console.log(data);
+        });
+    });
 
